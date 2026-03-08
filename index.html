@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NovaBridge Consulting Group</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+            background:#f4f7fb;
+            color:#333;
+        }
+
+        header{
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url("https://images.unsplash.com/photo-1523741543316-beb7fc7023d8");
+            background-size:cover;
+            background-position:center;
+            color:white;
+            padding:120px 20px;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:48px;
+            margin:0;
+        }
+
+        header p{
+            font-size:22px;
+            margin-top:12px;
+        }
+
+        .hero-buttons{
+            margin-top:35px;
+        }
+
+        .btn{
+            display:inline-block;
+            background:white;
+            color:#0d3b91;
+            padding:14px 28px;
+            margin:10px;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:6px;
+        }
+
+        .btn-light{
+            background:#ffd166;
+            color:#222;
+        }
+
+        nav{
+            background:#0d3b91;
+            text-align:center;
+            padding:14px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            margin:18px;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:15px;
+        }
+
+        section{
+            padding:70px;
+            max-width:1100px;
+            margin:auto;
+        }
+
+        .card{
+            background:white;
+            border-radius:12px;
+            padding:40px;
+            box-shadow:0px 2px 12px rgba(0,0,0,0.1);
+        }
+
+        .service-box{
+            background:white;
+            padding:25px;
+            margin:25px 0;
+            border-left:6px solid #1f4fbf;
+            box-shadow:0px 2px 10px rgba(0,0,0,0.08);
+            border-radius:8px;
+        }
+
+        .service-box i{
+            font-size:22px;
+            color:#1f4fbf;
+            margin-right:10px;
+        }
+
+        .packages-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+            gap:20px;
+            margin-top:25px;
+        }
+
+        .package-box{
+            background:white;
+            border-radius:12px;
+            padding:28px;
+            box-shadow:0px 2px 12px rgba(0,0,0,0.1);
+            text-align:center;
+            border-top:5px solid #1f4fbf;
+        }
+
+        .package-box h3{
+            margin-top:0;
+        }
+
+        .price{
+            font-size:30px;
+            font-weight:bold;
+            color:#0d3b91;
+            margin:15px 0;
+        }
+
+        .package-box a{
+            display:inline-block;
+            margin-top:15px;
+            background:#0d3b91;
+            color:white;
+            text-decoration:none;
+            padding:12px 22px;
+            border-radius:6px;
+            font-weight:bold;
+        }
+
+        .highlight-section{
+            background:white;
+            border-radius:12px;
+            padding:40px;
+            box-shadow:0px 2px 12px rgba(0,0,0,0.1);
+        }
+
+        .highlight-section ul{
+            line-height:1.9;
+        }
+
+        .travel-note{
+            background:#fff7e6;
+            border-left:6px solid #ffd166;
+            padding:20px;
+            border-radius:8px;
+            margin-top:25px;
+        }
+
+        .steps-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+            gap:20px;
+            margin-top:25px;
+        }
+
+        .step-box{
+            background:white;
+            border-radius:12px;
+            padding:25px;
+            box-shadow:0px 2px 12px rgba(0,0,0,0.08);
+            text-align:center;
+        }
+
+        .step-box i{
+            font-size:28px;
+            color:#1f4fbf;
+            margin-bottom:12px;
+        }
+
+        .faq-item{
+            background:white;
+            border-radius:10px;
+            padding:22px;
+            margin:18px 0;
+            box-shadow:0px 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .contact{
+            background:linear-gradient(135deg, #1f4fbf, #0d3b91);
+            color:white;
+            padding:60px;
+            border-radius:12px;
+        }
+
+        .contact-form{
+            margin-top:25px;
+            display:grid;
+            gap:15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:8px;
+            font-size:15px;
+            box-sizing:border-box;
+        }
+
+        .contact-form button{
+            background:#ffd166;
+            color:#222;
+            border:none;
+            padding:14px 22px;
+            border-radius:8px;
+            font-weight:bold;
+            cursor:pointer;
+            width:220px;
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            color:#666;
+            font-size:14px;
+        }
+
+        @media (max-width:700px){
+            section{
+                padding:35px 20px;
+            }
+
+            header h1{
+                font-size:34px;
+            }
+
+            header p{
+                font-size:18px;
+            }
+
+            nav a{
+                display:inline-block;
+                margin:8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NovaBridge Consulting Group</h1>
+        <p>Connecting Sustainable Grassroots Producers to Global Markets</p>
+
+        <div class="hero-buttons">
+            <a href="#packages" class="btn">View Packages</a>
+            <a href="#contact" class="btn btn-light">Contact Us</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#process">How We Work</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="card">
+            <h2>About NovaBridge</h2>
+
+            <p>
+                NovaBridge Consulting Group specializes in cross-border agribusiness advisory,
+                helping grassroots producers, cooperatives, and agricultural enterprises connect
+                with international processors, retailers, investors, and new market opportunities.
+            </p>
+
+            <p>
+                Based in the Netherlands, NovaBridge supports sustainable agricultural supply chains
+                between emerging production regions such as Africa, Suriname, and other developing
+                markets and high-value destinations in Europe and beyond.
+            </p>
+
+            <h3>Founder & Principal Consultant</h3>
+            <p><strong>Olufunke A. Bereola</strong></p>
+
+            <p>
+                Olufunke A. Bereola is an economist and international business specialist with
+                interest in agribusiness development, market access, trade linkages, and sustainable
+                value chain growth. Through NovaBridge, she helps clients build responsible and
+                profitable cross-border partnerships.
+            </p>
+
+            <div class="travel-note">
+                <strong>Special Request Travel Advisory:</strong> NovaBridge is based in the Netherlands
+                and primarily offers remote consulting. However, on-site travel to Africa, South America,
+                Suriname, or other locations can be arranged for selected projects on special request.
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Core Services</h2>
+
+        <div class="service-box">
+            <h3><i class="fas fa-globe"></i> Cross-Border Agribusiness Advisory</h3>
+            <p>
+                Strategic guidance for businesses and producers seeking to build international sourcing,
+                distribution, and agribusiness partnerships.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3><i class="fas fa-chart-line"></i> Market Entry Strategy</h3>
+            <p>
+                Helping clients understand buyer requirements, export readiness, product positioning,
+                and entry opportunities in target markets.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3><i class="fas fa-seedling"></i> Supply Chain Development</h3>
+            <p>
+                Supporting transparent and reliable agricultural supply chains linking grassroots
+                producers with processors, wholesalers, and retailers.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3><i class="fas fa-handshake"></i> Partnership & Sourcing Support</h3>
+            <p>
+                Helping identify suitable producer groups, potential buyers, and collaboration
+                pathways for sustainable commercial relationships.
+            </p>
+        </div>
+    </section>
+
+    <section id="packages">
+        <h2>Consulting Packages</h2>
+
+        <div class="packages-grid">
+            <div class="package-box">
+                <h3>Intro Consultation</h3>
+                <p class="price">€75</p>
+                <p>30-minute advisory call for first-time clients who need guidance or direction.</p>
+                <a href="#">Book This Package</a>
+            </div>
+
+            <div class="package-box">
+                <h3>Market Entry Advisory</h3>
+                <p class="price">€180</p>
+                <p>One focused strategy session on export readiness, market access, and positioning.</p>
+                <a href="#">Book This Package</a>
+            </div>
+
+            <div class="package-box">
+                <h3>Supply Chain Strategy</h3>
+                <p class="price">€450</p>
+                <p>In-depth support for sourcing models, producer-buyer alignment, and route planning.</p>
+                <a href="#">Book This Package</a>
+            </div>
+
+            <div class="package-box">
+                <h3>On-Site Field Advisory</h3>
+                <p class="price">Custom</p>
+                <p>For physical travel, project visits, field assessment, stakeholder meetings, and special assignments.</p>
+                <a href="#contact">Request Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <h2>How We Work</h2>
+
+        <div class="steps-grid">
+            <div class="step-box">
+                <i class="fas fa-comments"></i>
+                <h3>1. Discovery</h3>
+                <p>We begin with a conversation to understand your product, market, and business goals.</p>
+            </div>
+
+            <div class="step-box">
+                <i class="fas fa-magnifying-glass-chart"></i>
+                <h3>2. Assessment</h3>
+                <p>We review your sourcing needs, export readiness, buyer fit, and strategic direction.</p>
+            </div>
+
+            <div class="step-box">
+                <i class="fas fa-diagram-project"></i>
+                <h3>3. Strategy</h3>
+                <p>We design a practical route for market access, partnerships, and supply chain growth.</p>
+            </div>
+
+            <div class="step-box">
+                <i class="fas fa-plane"></i>
+                <h3>4. Support</h3>
+                <p>Implementation support can be provided remotely or physically on special request.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="focus">
+        <div class="highlight-section">
+            <h2>Focus Areas</h2>
+            <ul>
+                <li>Connecting grassroots farmers and producer groups with export opportunities</li>
+                <li>Supporting agribusiness sourcing between Africa, Suriname, and Europe</li>
+                <li>Building sustainable and traceable supply chains</li>
+                <li>Preparing producers and businesses for global buyer expectations</li>
+                <li>Advising on strategic partnerships, market access, and commercial growth</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Do you only work remotely?</h3>
+            <p>No. Most projects begin remotely, but on-site travel can be arranged on special request.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Who do you work with?</h3>
+            <p>I work with producers, cooperatives, exporters, buyers, investors, and agribusiness founders.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can you help with Africa-Europe market connections?</h3>
+            <p>Yes. That is one of NovaBridge’s main focus areas, especially for sustainable and traceable products.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I book a session?</h3>
+            <p>You can use the package buttons or the contact section below. Later, these buttons will be connected to direct payment links.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>Email: olufunkebereola@gmail.com</p>
+            <p>NovaBridge Consulting Group</p>
+            <p>Netherlands-based | International advisory available remotely and on special request</p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your full name">
+                <input type="email" placeholder="Your email address">
+                <input type="text" placeholder="Subject">
+                <textarea rows="5" placeholder="Tell us about your project or request"></textarea>
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 NovaBridge Consulting Group. All rights reserved.
+    </footer>
+
+</body>
+</html>
